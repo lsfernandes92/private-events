@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  get 'users/new'
-  get 'users/create'
-  get 'users/show'
-  resources :users, only: [:new, :create, :show]
+  root 'static_pages#home'
+  get '/signup', to: 'users#new'
+  resources :users, only: [:create, :show]
 end
