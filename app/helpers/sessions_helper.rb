@@ -2,7 +2,7 @@ module SessionsHelper
 
   def login(user)
     session[:user_id] = user.id
-    @current_user ||= User.find_by(id: user.id)
+    @current_user ||= user
   end
 
   def logout
